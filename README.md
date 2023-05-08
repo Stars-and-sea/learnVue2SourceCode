@@ -1,2 +1,2 @@
 # learnVue2SourceCode
-学习vue2源码
+记录本人学习vue2源码

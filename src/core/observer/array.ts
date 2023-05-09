@@ -7,6 +7,7 @@ import { TriggerOpTypes } from '../../v3'
 import { def } from '../util/index'
 
 const arrayProto = Array.prototype
+// 以数组原型对象创建了一个新的对象
 export const arrayMethods = Object.create(arrayProto)
 
 const methodsToPatch = [

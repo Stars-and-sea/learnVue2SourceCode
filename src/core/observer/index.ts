@@ -16,7 +16,7 @@ import {
   noop
 } from '../util/index'
 import { isReadonly, isRef, TrackOpTypes, TriggerOpTypes } from '../../v3'
-
+// getOwnPropertyNames返回一个由指定对象的所有自身属性的属性名组成的数组
 const arrayKeys = Object.getOwnPropertyNames(arrayMethods)
 
 const NO_INITIAL_VALUE = {}
@@ -134,7 +134,9 @@ export function defineReactive(
   mock?: boolean
 ) {
   const dep = new Dep()
-
+  // getOwnPropertyDescriptor回指定对象上一个自有属性对应的属性描述符
+  // 属性描述符有两种主要形式：数据描述符和存取描述符
+  // configurable表示该属性描述符是否可以被修改
   const property = Object.getOwnPropertyDescriptor(obj, key)
   if (property && property.configurable === false) {
     return
